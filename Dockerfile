@@ -25,7 +25,7 @@ RUN groupadd -r neo4j && useradd -r -g neo4j neo4j \
     && chown -R neo4j:neo4j $NEO4J_HOME $NEO4J_CONF
 
 # Descargar Neo4j
-#RUN wget -O neo4j.tar.gz "https://dist.neo4j.org/neo4j-community-${NEO4J_VERSION}-unix.tar.gz" \
+RUN wget -O neo4j.tar.gz "https://dist.neo4j.org/neo4j-community-${NEO4J_VERSION}-unix.tar.gz" \
 COPY neo4j.tar.gz /neo4j.tar.gz
 RUN tar -xzf neo4j.tar.gz -C /var/lib/ \
     && mv /var/lib/neo4j-community-${NEO4J_VERSION}/* /var/lib/neo4j/ \
