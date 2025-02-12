@@ -18,7 +18,7 @@ docker build --no-cache -t neo4j:4.4.11 .
 Como es un entorno de lab arrancamos en modo consola para que restaure la bbdd y aplique credenciales neo4j/admin123 cuando salgamos con CONTROL + C borrara el contenedor
 
 ```
-docker run -it -rm --name neo4j -p 7474:7474 -p 7687:7687  neo4j:4.4.11
+docker run -it --rm --name neo4j -p 7474:7474 -p 7687:7687  neo4j:4.4.11
 
 ```
 
